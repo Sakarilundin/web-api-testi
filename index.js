@@ -1,9 +1,13 @@
-const http = require("http");
+const express = require('express')
+express.static('public')
+const app = express()
+app.use(express.static('public'))
+const port = 8080
 
-const server = http.createServer((request, response) => {
-    response.end("Path; " + request.url);
-});
+app.get('/', (req, res) => {
+  res.send('Welcome to my server!')
+})
 
-server.listen(8080, () => {
-    console.log(`Server istening in port ${server.address().port}`);   
-});
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`)
+})
