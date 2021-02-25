@@ -1,2 +1,2 @@
-# location-Web-Api
-Location-Web-Api
+# location-api
+Lokaatio-Api
